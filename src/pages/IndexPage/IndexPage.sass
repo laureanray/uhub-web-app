@@ -1,0 +1,105 @@
+@import url('../../styles/reset.sass')
+
+$primary: #be2bf1
+$secondary: #ff1f7b
+$danger: #ff343f
+$warning: #f6f056
+$success: #8de751
+
+$white: #fafafa
+
+
+body
+  background: rgb(240, 246, 255)
+  display: flex
+  align-items: center
+  height: 100vh
+
+.IndexPage
+  width: 80%
+  margin: auto
+  display: flex
+  flex-direction: column
+
+h1, h2, h3, h4
+  color: #181818
+  padding: 0.2rem 0
+
+h1
+  font-size: 2.5rem
+
+h2
+  font-size: 2rem
+
+h3
+  font-size: 1.5rem
+
+h4
+  font-size: 1.25rem
+
+
+p
+  font-family: 'Oxygen', sans-serif
+  padding: 0.4rem 0
+  font-size: 1rem
+
+  &.muted
+    color: #505050
+
+
+p.small
+  font-family: 'Oxygen', sans-serif!important
+  padding: 0.2rem 0
+  font-size: 0.8rem
+
+.button
+  padding: 0.70rem
+  padding-top: 0.75rem
+  border: 0
+  margin: 0.20rem
+  font-family: 'GothamPro', sans-serif!important
+  font-size: 0.90rem
+  border-radius: 0.5rem
+  outline: 0
+  cursor: pointer
+  background: #fafafa
+  color: #202020
+
+.button-primary
+  color: $white!important
+  background: $primary!important
+
+.button-secondary
+  color: $white!important
+  background: $secondary!important
+
+.button-danger
+  color: $white!important
+  background: $danger!important
+
+.button-success
+  color: $white!important
+  background: $success!important
+
+
+.button-sm
+  padding: 0.55rem
+  padding-top: 0.59rem
+  border: 0
+  outline: 0
+  margin: 0.20rem
+  font-family: 'GothamPro', sans-serif!important
+  font-size: 0.75rem
+  border-radius: 0.5rem
+  cursor: pointer
+  background: #fafafa
+  color: #202020
+
+
+.card
+  background: $white!important
+  padding: 1.2rem
+  margin: 0.5rem 0.20rem
+  border-radius: 0.5rem
+  width: 500px
+  box-shadow: 0 15px 20px rgba(201, 201, 201, 0.5)

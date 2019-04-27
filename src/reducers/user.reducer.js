@@ -1,5 +1,7 @@
 const userReducerDefaultState = {
-  status: "not logged in"
+  isAuthenticated: "false",
+  status: undefined,
+  token: undefined
 };
 
 export default (state = userReducerDefaultState, action) => {
@@ -7,15 +9,27 @@ export default (state = userReducerDefaultState, action) => {
     case "USER_LOGIN":
       return {
         ...state,
-        status: "logging in",
-        email: action.user.email,
-        password: action.user.password
+        status: "LOGGING_IN"
       };
     case "USER_AUTHENTICATED":
       return {
         ...state,
-        status: "authenticated",
+        status: "AUTH_OK",
+        isAuthenticated: true,
         token: action.token
+      };
+    case "USER_LOGOUT":
+      return {
+        ...state,
+        status: undefined,
+        isAuthenticated: false,
+        token: undefined
+      };
+    case "USER_LOGIN_FAILED":
+      return {
+        ...state,
+        status: "AUTH_FAILED",
+        error: action.error
       };
 
     default:
